@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Las Olas Agency | Strategic Capital for Business Growth & Commercial Real Estate</title>
+<meta name="description" content="Las Olas Agency facilitates SBA 7(a), 504, and Commercial Lending solutions for businesses ready to grow.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='6' fill='%23dbeafe'/%3E%3Crect x='6' y='6' width='52' height='52' rx='4' fill='none' stroke='%231d6fa8' stroke-width='1.5'/%3E%3Ctext x='32' y='46' font-family='Georgia%2C serif' font-size='36' font-weight='600' fill='%231d6fa8' text-anchor='middle'%3EL%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    /* Blue Palette */
+    --sky-deep:    #0c3d6b;
+    --sky-mid:     #1a5f9e;
+    --sky-bright:  #2684d4;
+    --sky-light:   #5ba8e8;
+    --sky-pale:    #bfdffa;
+    --sky-mist:    #e8f4fd;
+    --sky-frost:   #f4f9fe;
+
+    /* Accent — soft teal-cyan */
+    --accent:      #1ba8c1;
+    --accent-light:#5ecde0;
+    --accent-pale: #d0f2f7;
+
+    /* Text */
+    --text-dark:   #0c2644;
+    --text-mid:    #2d5475;
+    --text-muted:  #6b90ae;
+
+    /* Utility */
+    --white:       #ffffff;
+    --cream:       #f7fbff;
+
+    --border-blue: rgba(38,132,212,0.2);
+    --border-sky:  rgba(38,132,212,0.12);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--text-dark);
+    overflow-x: hidden;
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes pulse {
+    0%,100% { opacity:1; transform: scale(1); }
+    50% { opacity:0.4; transform: scale(1.4); }
+  }
+  @keyframes fadeUp {
+    from { opacity:0; transform: translateY(24px); }
+    to   { opacity:1; transform: translateY(0); }
+  }
+  @keyframes shimmer {
+    0%   { background-position: -200% center; }
+    100% { background-position: 200% center; }
+  }
+  @keyframes floatLine {
+    0%,100% { transform: scaleX(1); opacity: 0.3; }
+    50%     { transform: scaleX(1.06); opacity: 0.6; }
+  }
+  @keyframes slideInRight {
+    from { opacity:0; transform: translateX(30px); }
+    to   { opacity:1; transform: translateX(0); }
+  }
+
+  .fade-up {
+    opacity: 0;
+    animation: fadeUp 0.75s cubic-bezier(0.22,1,0.36,1) forwards;
+  }
+  .delay-1 { animation-delay: 0.15s; }
+  .delay-2 { animation-delay: 0.3s; }
+  .delay-3 { animation-delay: 0.45s; }
+  .delay-4 { animation-delay: 0.6s; }
+  .delay-5 { animation-delay: 0.75s; }
+
+  /* ── HEADER ── */
+  header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5vw;
+    height: 70px;
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(38,132,212,0.15);
+    transition: box-shadow 0.3s;
+  }
+  header.scrolled {
+    box-shadow: 0 4px 32px rgba(12,61,107,0.12);
+  }
+
+  .logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--sky-deep);
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .logo-mark {
+    width: 32px; height: 32px;
+    background: var(--sky-bright);
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--white);
+    flex-shrink: 0;
+  }
+  .logo span { color: var(--sky-bright); }
+
+  .header-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--sky-bright);
+    border: 1px solid rgba(38,132,212,0.4);
+    padding: 9px 22px;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.25s;
+    background: transparent;
+    text-decoration: none;
+  }
+  .header-cta:hover {
+    background: var(--sky-bright);
+    color: var(--white);
+    border-color: var(--sky-bright);
+  }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 0 5vw;
+    padding-top: 70px;
+    gap: 5vw;
+    position: relative;
+    overflow: hidden;
+    background: var(--sky-frost);
+  }
+
+  /* Layered background */
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+      radial-gradient(ellipse 60% 60% at 70% 40%, rgba(38,132,212,0.07) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 70% at 10% 80%, rgba(91,168,232,0.06) 0%, transparent 60%),
+      linear-gradient(160deg, #eaf5ff 0%, #f4f9fe 60%, #f7fbff 100%);
+    z-index: 0;
+  }
+
+  /* Decorative grid lines */
+  .hero-grid-lines {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  .hero-grid-lines::before {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 50%; width: 1px;
+    background: linear-gradient(to bottom, transparent 0%, rgba(38,132,212,0.1) 30%, rgba(38,132,212,0.1) 70%, transparent 100%);
+    animation: floatLine 6s ease-in-out infinite;
+  }
+  .hero-grid-lines::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 0;
+    top: 50%; height: 1px;
+    background: linear-gradient(to right, transparent 0%, rgba(38,132,212,0.07) 40%, rgba(38,132,212,0.07) 60%, transparent 100%);
+  }
+
+  .hero-left {
+    padding: 7vh 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-headline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.8rem, 4.8vw, 4.4rem);
+    font-weight: 400;
+    line-height: 1.1;
+    color: var(--sky-deep);
+    letter-spacing: -0.01em;
+    margin-bottom: 2rem;
+  }
+  .hero-headline em {
+    font-style: italic;
+    font-weight: 300;
+    color: var(--sky-bright);
+    display: block;
+  }
+
+  /* Blue shimmer accent line */
+  .headline-accent {
+    display: block;
+    width: 64px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--sky-bright) 0%, var(--accent-light) 50%, var(--sky-bright) 100%);
+    background-size: 200% auto;
+    animation: shimmer 3s linear infinite;
+    margin-bottom: 2rem;
+    margin-top: 0.5rem;
+  }
+
+  .hero-sub {
+    font-size: 0.97rem;
+    font-weight: 300;
+    line-height: 1.85;
+    color: var(--text-muted);
+    max-width: 460px;
+    margin-bottom: 3rem;
+  }
+  .hero-sub strong {
+    color: var(--text-mid);
+    font-weight: 500;
+  }
+
+  .hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--white);
+    background: var(--sky-bright);
+    padding: 15px 34px;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.25s;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+  }
+  .btn-primary::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.18) 50%, transparent 100%);
+    transform: translateX(-100%);
+    transition: transform 0.5s;
+  }
+  .btn-primary:hover::after { transform: translateX(100%); }
+  .btn-primary:hover {
+    background: var(--sky-mid);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(38,132,212,0.28);
+  }
+
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.88rem;
+    font-weight: 300;
+    color: var(--text-muted);
+    background: transparent;
+    padding: 15px 0;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+  }
+  .btn-ghost:hover { color: var(--sky-bright); }
+
+  /* ── STATS ROW IN HERO ── */
+  .hero-stats {
+    display: flex;
+    gap: 2.5rem;
+    margin-top: 3.5rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid rgba(38,132,212,0.15);
+  }
+  .stat-item {}
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--sky-bright);
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+  .stat-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-top: 6px;
+  }
+
+  /* ── HERO FORM CARD ── */
+  .hero-right {
+    padding: 5vh 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  .inquiry-card {
+    background: var(--white);
+    border: 1px solid rgba(38,132,212,0.18);
+    border-radius: 8px;
+    padding: 2.8rem 2.4rem;
+    box-shadow: 0 4px 40px rgba(12,61,107,0.08);
+    position: relative;
+    overflow: hidden;
+  }
+  .inquiry-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--sky-bright) 0%, var(--accent-light) 60%, var(--sky-light) 100%);
+  }
+
+  .card-eyebrow {
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--sky-bright);
+    margin-bottom: 0.6rem;
+  }
+  .card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.75rem;
+    font-weight: 400;
+    color: var(--sky-deep);
+    margin-bottom: 2rem;
+    line-height: 1.25;
+  }
+
+  .form-row { margin-bottom: 1.2rem; }
+
+  .form-label {
+    display: block;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+  }
+  .form-control {
+    width: 100%;
+    background: var(--sky-frost);
+    border: 1px solid rgba(38,132,212,0.2);
+    border-radius: 3px;
+    padding: 12px 16px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: var(--text-dark);
+    outline: none;
+    transition: border-color 0.2s, background 0.2s;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+  .form-control:focus {
+    border-color: var(--sky-bright);
+    background: rgba(38,132,212,0.04);
+  }
+  .form-control::placeholder { color: var(--text-muted); opacity: 0.6; }
+
+  select.form-control {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%232684d4' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 40px;
+    cursor: pointer;
+  }
+  select.form-control option { background: var(--white); color: var(--text-dark); }
+
+  .form-row-2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .btn-submit {
+    width: 100%;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--white);
+    background: var(--sky-bright);
+    border: none;
+    border-radius: 3px;
+    padding: 16px;
+    cursor: pointer;
+    transition: all 0.25s;
+    margin-top: 0.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    overflow: hidden;
+  }
+  .btn-submit:hover {
+    background: var(--sky-mid);
+    box-shadow: 0 6px 20px rgba(38,132,212,0.28);
+  }
+
+  .form-disclaimer {
+    font-size: 0.68rem;
+    color: var(--text-muted);
+    text-align: center;
+    margin-top: 1rem;
+    line-height: 1.6;
+  }
+
+  /* ── SERVICES ── */
+  .services {
+    background: var(--white);
+    padding: 8rem 5vw 7rem;
+  }
+
+  .section-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 1.2rem;
+  }
+  .section-label::before {
+    content: '';
+    display: block;
+    width: 28px;
+    height: 1px;
+    background: var(--sky-bright);
+  }
+  .section-eyebrow {
+    font-size: 0.68rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--sky-bright);
+  }
+  .section-headline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 3.8vw, 3.2rem);
+    font-weight: 400;
+    color: var(--sky-deep);
+    line-height: 1.12;
+    margin-bottom: 4.5rem;
+    max-width: 520px;
+  }
+  .section-headline em {
+    font-style: italic;
+    color: var(--sky-bright);
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: rgba(38,132,212,0.1);
+    border: 1px solid rgba(38,132,212,0.1);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .service-card {
+    background: var(--sky-frost);
+    padding: 3rem 2.5rem 3.5rem;
+    border-top: 3px solid transparent;
+    transition: border-color 0.35s, background 0.35s, transform 0.35s;
+    position: relative;
+    cursor: default;
+  }
+  .service-card:hover {
+    background: var(--white);
+    border-top-color: var(--sky-bright);
+    transform: translateY(-3px);
+    z-index: 1;
+    box-shadow: 0 16px 48px rgba(12,61,107,0.1);
+  }
+
+  .service-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.85rem;
+    color: rgba(38,132,212,0.3);
+    letter-spacing: 0.1em;
+    margin-bottom: 1.8rem;
+    font-weight: 400;
+  }
+
+  .service-icon-wrap {
+    width: 48px; height: 48px;
+    background: var(--sky-mist);
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.6rem;
+    transition: background 0.3s;
+  }
+  .service-card:hover .service-icon-wrap { background: rgba(38,132,212,0.12); }
+
+  .service-icon {
+    width: 24px; height: 24px;
+  }
+
+  .service-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.55rem;
+    font-weight: 500;
+    color: var(--sky-deep);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+  .service-desc {
+    font-size: 0.88rem;
+    font-weight: 300;
+    color: var(--text-mid);
+    line-height: 1.85;
+  }
+
+  .service-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--sky-bright);
+    margin-top: 1.8rem;
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity 0.3s, transform 0.3s;
+    border: none;
+    background: none;
+  }
+  .service-card:hover .service-link { opacity: 1; transform: translateY(0); }
+
+  /* ── STATS BAND ── */
+  .stats-band {
+    background: var(--sky-mid);
+    padding: 4.5rem 5vw;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .band-stat {
+    padding: 2.5rem 2rem;
+    text-align: center;
+    border-right: 1px solid rgba(255,255,255,0.15);
+    position: relative;
+  }
+  .band-stat:last-child { border-right: none; }
+  .band-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    font-weight: 400;
+    color: var(--white);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.7rem;
+  }
+  .band-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.5;
+  }
+
+  /* ── TRUST ── */
+  .trust {
+    background: var(--sky-frost);
+    padding: 8rem 5vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8vw;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .trust::before {
+    content: 'LOA';
+    position: absolute;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22rem;
+    font-weight: 600;
+    color: rgba(38,132,212,0.04);
+    bottom: -4rem;
+    right: -2rem;
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .trust-eyebrow {
+    font-size: 0.68rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--sky-bright);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 1.4rem;
+  }
+  .trust-eyebrow::before {
+    content: '';
+    display: block;
+    width: 28px;
+    height: 1px;
+    background: var(--sky-bright);
+  }
+
+  .trust-headline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-weight: 400;
+    color: var(--sky-deep);
+    line-height: 1.18;
+    margin-bottom: 1.6rem;
+  }
+  .trust-headline em {
+    font-style: italic;
+    color: var(--sky-bright);
+  }
+  .trust-body {
+    font-size: 0.93rem;
+    font-weight: 300;
+    color: var(--text-muted);
+    line-height: 1.9;
+    max-width: 420px;
+    margin-bottom: 2.8rem;
+  }
+
+  .trust-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .trust-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.4rem;
+    padding: 2rem 2.2rem;
+    background: var(--white);
+    border: 1px solid rgba(38,132,212,0.14);
+    border-radius: 2px;
+    transition: background 0.3s, border-color 0.3s, box-shadow 0.3s;
+  }
+  .trust-item:hover {
+    background: var(--sky-mist);
+    border-color: rgba(38,132,212,0.28);
+    box-shadow: 0 4px 18px rgba(12,61,107,0.06);
+  }
+
+  .trust-icon-wrap {
+    width: 40px; height: 40px;
+    background: var(--sky-mist);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .trust-icon {
+    width: 18px; height: 18px;
+    color: var(--sky-bright);
+  }
+  .trust-text strong {
+    display: block;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--sky-deep);
+    margin-bottom: 5px;
+  }
+  .trust-text span {
+    font-size: 0.82rem;
+    font-weight: 300;
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--sky-deep);
+    padding: 3rem 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.55);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .footer-logo-mark {
+    width: 24px; height: 24px;
+    background: rgba(91,168,232,0.25);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    color: var(--sky-light);
+    font-weight: 600;
+  }
+  .footer-logo span { color: var(--sky-light); }
+  .footer-text {
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.25);
+    text-align: center;
+    letter-spacing: 0.04em;
+  }
+  .footer-right {
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.25);
+    letter-spacing: 0.04em;
+  }
+
+  /* ── TYPEFORM MODAL ── */
+  .tf-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(12,61,107,0.7);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    backdrop-filter: blur(4px);
+  }
+  .tf-overlay.active { display: flex; }
+  .tf-modal {
+    background: var(--white);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 620px;
+    height: 70vh;
+    max-height: 640px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(38,132,212,0.25);
+    animation: slideInRight 0.3s cubic-bezier(0.22,1,0.36,1);
+  }
+  .tf-close {
+    position: absolute;
+    top: 14px; right: 14px;
+    z-index: 10;
+    background: var(--sky-deep);
+    border: none;
+    border-radius: 50%;
+    width: 36px; height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--white);
+    font-size: 1rem;
+    transition: background 0.2s;
+  }
+  .tf-close:hover { background: var(--sky-bright); }
+  .tf-modal iframe { width: 100%; height: 100%; border: none; }
+  .tf-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 3rem;
+    text-align: center;
+    background: var(--sky-frost);
+  }
+  .tf-placeholder-icon { font-size: 3rem; }
+  .tf-placeholder h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    color: var(--sky-deep);
+  }
+  .tf-placeholder p {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    max-width: 360px;
+    line-height: 1.7;
+  }
+  .tf-placeholder code {
+    font-size: 0.8rem;
+    background: var(--sky-deep);
+    color: var(--sky-light);
+    padding: 6px 14px;
+    border-radius: 2px;
+    font-family: monospace;
+  }
+
+  /* ── RESPONSIVE ── */
+
+  @media (max-width: 960px) {
+    .hero {
+      grid-template-columns: 1fr;
+      min-height: auto;
+      padding: 100px 6vw 6vh;
+      gap: 3rem;
+    }
+    .hero-left { padding-top: 2vh; }
+    .hero-right { padding: 0 0 4vh; }
+    .hero-stats { gap: 2rem; }
+    .services { padding: 5rem 6vw 4rem; }
+    .services-grid { grid-template-columns: 1fr; gap: 1px; }
+    .stats-band { grid-template-columns: repeat(2, 1fr); }
+    .trust {
+      grid-template-columns: 1fr;
+      gap: 3.5rem;
+      padding: 5rem 6vw;
+    }
+    footer { justify-content: center; text-align: center; }
+    .footer-right { display: none; }
+  }
+
+  @media (max-width: 600px) {
+    header { padding: 0 4vw; height: 62px; }
+    .header-cta { display: none; }
+    .logo { font-size: 1.2rem; }
+    .logo-mark { width: 28px; height: 28px; font-size: 0.95rem; }
+
+    .hero { padding: 90px 4vw 5vh; gap: 2.5rem; }
+    .hero-headline { font-size: clamp(2rem, 8vw, 2.6rem); margin-bottom: 1.4rem; }
+    .hero-sub { font-size: 0.92rem; margin-bottom: 2rem; max-width: 100%; }
+    .hero-actions { gap: 1rem; }
+    .btn-primary { padding: 14px 26px; font-size: 0.78rem; width: 100%; justify-content: center; }
+    .btn-ghost { padding: 10px 0; font-size: 0.85rem; }
+    .hero-stats {
+      flex-wrap: wrap;
+      gap: 1.2rem 2rem;
+      margin-top: 2.5rem;
+      padding-top: 2rem;
+    }
+    .stat-num { font-size: 1.7rem; }
+    .stat-label { font-size: 0.65rem; }
+
+    .inquiry-card { padding: 2rem 1.5rem; }
+    .card-title { font-size: 1.5rem; margin-bottom: 1.5rem; }
+    .form-row-2col { grid-template-columns: 1fr; }
+    .form-control { font-size: 1rem; padding: 13px 14px; }
+    select.form-control { font-size: 1rem; }
+    .btn-submit { padding: 15px; font-size: 0.82rem; }
+
+    .services { padding: 4rem 4vw 3.5rem; }
+    .section-headline { font-size: 1.85rem; margin-bottom: 3rem; }
+    .service-card { padding: 2.2rem 1.8rem 2.8rem; }
+    .service-link { opacity: 1; transform: none; }
+
+    .stats-band { grid-template-columns: 1fr 1fr; padding: 3rem 4vw; }
+    .band-stat {
+      border-right: none;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      padding: 1.8rem 1rem;
+    }
+    .band-stat:nth-child(odd) { border-right: 1px solid rgba(255,255,255,0.1); }
+    .band-stat:nth-last-child(-n+2) { border-bottom: none; }
+    .band-num { font-size: 2.2rem; }
+    .band-label { font-size: 0.65rem; }
+
+    .trust { padding: 4rem 4vw; }
+    .trust-headline { font-size: 1.85rem; }
+    .trust-body { font-size: 0.9rem; }
+    .trust-item { padding: 1.4rem 1.5rem; gap: 1rem; }
+    .trust-icon-wrap { width: 36px; height: 36px; flex-shrink: 0; }
+    .trust-text strong { font-size: 0.85rem; }
+    .trust-text span { font-size: 0.78rem; }
+    .trust::before { font-size: 12rem; }
+
+    footer { padding: 2rem 4vw; gap: 0.6rem; }
+    .footer-logo { font-size: 0.95rem; }
+
+    .tf-overlay { padding: 1rem; }
+    .tf-modal { height: 85vh; max-height: none; border-radius: 4px; }
+  }
+
+  @media (max-width: 380px) {
+    .hero-headline { font-size: 1.85rem; }
+    .hero { padding: 85px 4vw 4vh; }
+    .stat-num { font-size: 1.5rem; }
+    .band-num { font-size: 1.9rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="mainHeader">
+  <a class="logo" href="#">
+    <div class="logo-mark">L</div>
+    <span>Las Olas</span>&nbsp;Agency
+  </a>
+  <a class="header-cta" href="#inquiry" onclick="scrollToForm(event)">Check Eligibility →</a>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid-lines"></div>
+
+  <div class="hero-left">
+    <h1 class="hero-headline fade-up delay-1">
+      Strategic Capital<br>
+      for <em>Business Growth</em>
+      &amp; Commercial<br>Real Estate.
+    </h1>
+    <span class="headline-accent fade-up delay-2"></span>
+
+    <p class="hero-sub fade-up delay-2">
+      Las Olas Agency delivers expert capital solutions for businesses ready to scale.
+      We facilitate <strong>SBA 7(a), 504, and Commercial Lending</strong> with precision, speed, and full confidentiality.
+    </p>
+
+    <div class="hero-actions fade-up delay-3">
+      <button class="btn-primary" onclick="openTypeform()">
+        Check Eligibility
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+      <a class="btn-ghost" href="#services">Explore Services ↓</a>
+    </div>
+
+    <div class="hero-stats fade-up delay-4">
+      <div class="stat-item">
+        <div class="stat-num">$5M+</div>
+        <div class="stat-label">Max Loan Size</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">3</div>
+        <div class="stat-label">Loan Programs</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">1-Day</div>
+        <div class="stat-label">Response Time</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-right" id="inquiry">
+    <div class="inquiry-card fade-up delay-2">
+      <p class="card-eyebrow">Quick Inquiry</p>
+      <h2 class="card-title">Start Your Application</h2>
+
+      <form id="inquiryForm" onsubmit="handleFormSubmit(event)"
+            action="https://formspree.io/f/YOUR_FORMSPREE_ID"
+            method="POST">
+        <input type="hidden" name="_subject" value="🏦 New Loan Inquiry — Las Olas Agency">
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+        <div class="form-row">
+          <label class="form-label">Desired Loan Amount</label>
+          <select class="form-control" name="loan_amount" required>
+            <option value="" disabled selected>Select a range</option>
+            <option>$100k – $500k</option>
+            <option>$500k – $2M</option>
+            <option>$2M – $5M</option>
+            <option>$5M+</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label class="form-label">Loan Purpose</label>
+          <select class="form-control" name="loan_purpose" required>
+            <option value="" disabled selected>Select purpose</option>
+            <option>SBA 7(a) — Business Expansion</option>
+            <option>SBA 504 — Fixed Asset / Real Estate</option>
+            <option>Working Capital / Line of Credit</option>
+            <option>CRE Acquisition</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label class="form-label">Company Name</label>
+          <input class="form-control" type="text" name="company" placeholder="Your business name" required>
+        </div>
+
+        <div class="form-row-2col">
+          <div>
+            <label class="form-label">Phone</label>
+            <input class="form-control" type="tel" name="phone" placeholder="+1 (000) 000-0000">
+          </div>
+          <div>
+            <label class="form-label">Email</label>
+            <input class="form-control" id="emailField" type="email" name="email" placeholder="you@company.com" required oninput="document.getElementById('replyTo').value=this.value">
+          </div>
+        </div>
+        <input type="hidden" id="replyTo" name="_replyto" value="">
+
+        <button type="submit" class="btn-submit" id="submitBtn">
+          Submit Inquiry
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </form>
+
+      <p class="form-disclaimer">
+        🔒 Your information is secure. Las Olas Agency does not share financial data with unauthorized third parties.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="section-label">
+    <span class="section-eyebrow">Areas of Expertise</span>
+  </div>
+  <h2 class="section-headline">Specialized Lending Solutions<br><em>Tailored to Your Goals</em></h2>
+
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-num">01</div>
+      <div class="service-icon-wrap">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="#2684d4" stroke-width="1.5" stroke-linecap="round">
+          <path d="M3 17V10m4 7V7m4 10V12m4 5V8m4 9V5"/>
+        </svg>
+      </div>
+      <h3 class="service-name">SBA Lending</h3>
+      <p class="service-desc">Specialized guidance for 7(a) and 504 loan programs to help small businesses scale — from eligibility assessment through closing.</p>
+      <button class="service-link" onclick="openTypeform()">Learn More →</button>
+    </div>
+
+    <div class="service-card">
+      <div class="service-num">02</div>
+      <div class="service-icon-wrap">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="#2684d4" stroke-width="1.5" stroke-linecap="round">
+          <circle cx="12" cy="12" r="9"/>
+          <path d="M12 8v8M8 12h8"/>
+        </svg>
+      </div>
+      <h3 class="service-name">Business Loans</h3>
+      <p class="service-desc">Term loans and lines of credit structured for operational expansion, equipment acquisition, and working capital needs.</p>
+      <button class="service-link" onclick="openTypeform()">Learn More →</button>
+    </div>
+
+    <div class="service-card">
+      <div class="service-num">03</div>
+      <div class="service-icon-wrap">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="#2684d4" stroke-width="1.5" stroke-linecap="round">
+          <rect x="3" y="10" width="18" height="11" rx="1"/>
+          <path d="M7 10V7a5 5 0 0110 0v3"/>
+        </svg>
+      </div>
+      <h3 class="service-name">Commercial Real Estate</h3>
+      <p class="service-desc">Expert financing for multi-family, industrial, and retail acquisitions — connecting your CRE goals with the right capital structure.</p>
+      <button class="service-link" onclick="openTypeform()">Learn More →</button>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAND -->
+<div class="stats-band">
+  <div class="band-stat">
+    <div class="band-num">$100k</div>
+    <div class="band-label">Minimum<br>Loan Size</div>
+  </div>
+  <div class="band-stat">
+    <div class="band-num">SBA</div>
+    <div class="band-label">7(a) &amp; 504<br>Certified</div>
+  </div>
+  <div class="band-stat">
+    <div class="band-num">100%</div>
+    <div class="band-label">Confidential<br>Process</div>
+  </div>
+  <div class="band-stat">
+    <div class="band-num">&lt;24h</div>
+    <div class="band-label">Initial Response<br>Guarantee</div>
+  </div>
+</div>
+
+<!-- TRUST -->
+<section class="trust">
+  <div class="trust-left">
+    <div class="trust-eyebrow">Why Las Olas Agency</div>
+    <h2 class="trust-headline">A Trusted Partner in<br><em>Complex Financing</em></h2>
+    <p class="trust-body">
+      We navigate the intricacies of SBA and commercial lending so you can focus on growing your business. Every engagement is handled with confidentiality, precision, and speed.
+    </p>
+    <button class="btn-primary" onclick="openTypeform()">
+      Speak With Us
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </button>
+  </div>
+
+  <div class="trust-right">
+    <div class="trust-item">
+      <div class="trust-icon-wrap">
+        <svg class="trust-icon" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M10 1a9 9 0 100 18A9 9 0 0010 1zm3.707 7.293a1 1 0 00-1.414-1.414L9 10.172 7.707 8.879a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+        </svg>
+      </div>
+      <div class="trust-text">
+        <strong>SSL-Secured &amp; Encrypted</strong>
+        <span>All data transmitted through our portal is protected by industry-standard SSL encryption. No exceptions.</span>
+      </div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon-wrap">
+        <svg class="trust-icon" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M10 1a9 9 0 100 18A9 9 0 0010 1zm3.707 7.293a1 1 0 00-1.414-1.414L9 10.172 7.707 8.879a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+        </svg>
+      </div>
+      <div class="trust-text">
+        <strong>Private &amp; Confidential</strong>
+        <span>Your financial information is never shared with unauthorized third parties. Full stop.</span>
+      </div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon-wrap">
+        <svg class="trust-icon" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M10 1a9 9 0 100 18A9 9 0 0010 1zm3.707 7.293a1 1 0 00-1.414-1.414L9 10.172 7.707 8.879a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+        </svg>
+      </div>
+      <div class="trust-text">
+        <strong>Dedicated Professional Contact</strong>
+        <span>Every inquiry is reviewed personally. Reach our team via our secure form — response within one business day.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">
+    <div class="footer-logo-mark">L</div>
+    <span>Las Olas</span>&nbsp;Agency
+  </div>
+  <p class="footer-text">© 2025 Las Olas Agency LLC. All rights reserved.</p>
+  <p class="footer-right">Strategic Capital Solutions</p>
+</footer>
+
+<!-- TYPEFORM MODAL -->
+<div class="tf-overlay" id="tfOverlay" onclick="handleOverlayClick(event)">
+  <div class="tf-modal" id="tfModal">
+    <button class="tf-close" onclick="closeTypeform()">✕</button>
+    <div class="tf-placeholder" id="tfPlaceholder">
+      <div data-tf-live="01KQJ69XEYXCTWCG5F8FS7CYZR"></div><script src="//embed.typeform.com/next/embed.js"></script>
+    </div>
+  </div>
+</div>
+
+<script>
+  window.addEventListener('scroll', function() {
+    document.getElementById('mainHeader').classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  function openTypeform() {
+    document.getElementById('tfOverlay').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeTypeform() {
+    document.getElementById('tfOverlay').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+  function handleOverlayClick(e) {
+    if (e.target === document.getElementById('tfOverlay')) closeTypeform();
+  }
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeTypeform();
+  });
+
+  function scrollToForm(e) {
+    e.preventDefault();
+    document.getElementById('inquiry').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  async function handleFormSubmit(e) {
+    e.preventDefault();
+    const form = e.target;
+    const btn = document.getElementById('submitBtn');
+    btn.innerHTML = '<span style="opacity:0.7">Sending…</span>';
+    btn.disabled = true;
+    const data = new FormData(form);
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+      if (response.ok) {
+        btn.innerHTML = '✓ Inquiry Received — We\'ll Be In Touch';
+        btn.style.background = '#1a7f5e';
+        btn.style.color = '#fff';
+        form.reset();
+      } else {
+        throw new Error('Server error');
+      }
+    } catch (err) {
+      btn.innerHTML = '⚠ Error — Please Try Again';
+      btn.style.background = '#c0392b';
+      btn.style.color = '#fff';
+      btn.disabled = false;
+      setTimeout(() => {
+        btn.innerHTML = 'Submit Inquiry <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
+        btn.style.background = '';
+        btn.style.color = '';
+      }, 3000);
+    }
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.service-card, .trust-item, .band-stat').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(el);
+  });
+</script>
+
+</body>
+</html>
