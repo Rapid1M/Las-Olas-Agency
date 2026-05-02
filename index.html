@@ -996,12 +996,14 @@
       <p class="card-eyebrow">Quick Inquiry</p>
       <h2 class="card-title">Start Your Application</h2>
 
-     action="https://api.web3forms.com/submit"
-method="POST">
-<input type="hidden" name="access_key" value="13668e74-02a0-4d84-ba08-5d6b5980690b">
-<input type="hidden" name="subject" value="New Loan Inquiry — Las Olas Agency">
-<input type="hidden" name="from_name" value="Las Olas Agency Website">
+     <form id="inquiryForm" onsubmit="handleFormSubmit(event)"
+      action="https://api.web3forms.com/submit"
+      method="POST">
+  <input type="hidden" name="access_key" value="13668e74-02a0-4d84-ba08-5d6b5980690b">
+  <input type="hidden" name="subject" value="New Loan Inquiry — Las Olas Agency">
+  <input type="hidden" name="from_name" value="Las Olas Agency Website">
 
+      
         <div class="form-row">
           <label class="form-label">Desired Loan Amount</label>
           <select class="form-control" name="loan_amount" required>
